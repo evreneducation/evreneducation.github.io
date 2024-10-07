@@ -209,6 +209,12 @@ img {
   text-align: center;
 }
 
+.venture-card{
+  height: 200px;
+  background: #E7F0FF !important;
+}
+
+
 /***
 
 ====================================================================
@@ -6435,7 +6441,8 @@ img {
 }
 
 .list-link li a:hover {
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
+  text-decoration: underline
 }
 
 .list-link li a:before {
