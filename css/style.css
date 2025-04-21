@@ -90,6 +90,7 @@ body {
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 .bordered-layout .page-wrapper {
@@ -2329,6 +2330,7 @@ img {
   transform: scale(1);
   transition: all 0.7s ease 0s;
   width: 100%;
+  height: 280px;
 }
 .single-product-item:hover .img-holder img {
   transform: scale(1.1);
@@ -7213,10 +7215,12 @@ img {
 
 .counter-section .inner-container {
   position: relative;
-  padding: 60px 0px 30px 60px;
+  padding: 60px 60px 30px 60px;
+  border-radius: 15px;
+  background-color: #e7f0ff;
 }
 
-.counter-section .inner-container:before {
+/* .counter-section .inner-container:before {
   position: absolute;
   content: "";
   left: 0px;
@@ -7225,7 +7229,7 @@ img {
   bottom: 0px;
   border-radius: 15px;
   background-color: #e7f0ff;
-}
+} */
 
 /* Fact Counter */
 
