@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KCPNXJP');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXEXLTWF7J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXEXLTWF7J');
+</script> -->
+
+  <meta charset="utf-8">
+  <title>EGS | IT Solution Services</title>
+  <!-- Stylesheets -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Color Switcher Mockup -->
+  <link href="css/color-switcher-design.css" rel="stylesheet">
+
+  <!-- Color Themes -->
+  <link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- Responsive -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInDown 0.8s forwards;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      color: #141d38;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
+    }
+
+    .subheading {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.9);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s 0.3s forwards;
+    }
+
+    .events-container {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .event-card {
+      width: 350px;
+      min-width: 350px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 0.6s forwards;
+      animation-delay: calc(var(--delay) * 0.2s);
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-image {
+      height: 180px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .event-content {
+      padding: 1.5rem;
+    }
+
+    .event-title {
+      font-size: 1.25rem;
+      color: #141d38;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .event-date {
+      font-size: 0.9rem;
+      color: #141d38;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .event-date svg {
+      margin-right: 0.5rem;
+    }
+
+    .event-description {
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .event-location {
+      font-size: 0.9rem;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+    }
+
+    .event-location svg {
+      margin-right: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .badge-upcoming {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-past {
+      background-color: #f3f4f6;
+      color: #6b7280;
+    }
+
+    .event-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #141d38;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .event-button:hover {
+      background-color: #2b3965;
+      color: gray;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .toggle-button {
+      background-color: #e5e7eb;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .toggle-button:first-child {
+      border-radius: 6px 0 0 6px;
+    }
+
+    .toggle-button:last-child {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .toggle-button.active {
+      background-color: #141d38;
+      color: white;
+    }
+
+    #past-events-section {
+      display: none;
+    }
+
+    .no-events {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 3rem;
+      color: #6b7280;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: #6b7280;
+      padding: 2rem 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .events-container {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Gallery styles */
+    .gallery-container {
+      margin-top: 3rem;
+    }
+
+    .gallery-heading {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #141d38;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .gallery-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #212c4c, #141d38);
+    }
+
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-button {
+      background-color: #e5e7eb;
+      border: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-button:hover {
+      background-color: #d1d5db;
+    }
+
+    .filter-button.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1s forwards 0.5s;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      height: 0;
+      padding-bottom: 75%;
+      /* 4:3 Aspect Ratio */
+      background-color: #ddd;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.5s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .gallery-item.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+    }
+
+    .gallery-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    .caption-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .caption-date {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .lightbox-img {
+      display: block;
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: white;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .lightbox-close:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .lightbox-nav:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .lightbox-prev {
+      left: 20px;
+    }
+
+    .lightbox-next {
+      right: 20px;
+    }
+
+    /* Loader animation */
+    .loader {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 0;
+    }
+
+    .loader div {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #4f46e5;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .loader div:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .loader div:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      80%,
+      100% {
+        transform: scale(0);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+
+      .lightbox-content {
+        max-width: 95%;
+      }
+
+      .lightbox-img {
+        max-height: 70vh;
+      }
+
+      .lightbox-nav {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+      }
+
+      .gallery-filter {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .filter-button {
+        margin: 0.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="hidden-bar-wrapper">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCPNXJP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one">
+
+      <!-- Header Top -->
+      <div class="header-top">
+        <div class="auto-container">
+          <div class="clearfix">
+            <!-- Top Left -->
+            <div class="top-left">
+              <!-- Info List -->
+              <ul class="info-list">
+                <li><a href="mailto:info@evrenglobalsolutions.com"><span class="icon flaticon-email"></span>
+                    info@evrenglobalsolutions.com</a></li>
+                <li><a href="tel:+918199050506"><span class="icon flaticon-telephone"></span> +91-8199050506</a></li>
+                <li><a href="tel:+918199050507"><span class="icon flaticon-telephone"></span> +91 8199050507</a></li>
+              </ul>
+            </div>
+
+            <!-- Top Right -->
+            <div class="top-right pull-right">
+              <!-- Social Box -->
+              <ul class="social-box">
+                <li><a
+                    href="https://www.facebook.com/pages/category/Educational-Consultant/Evren-Global-Solutions-105297237852842/"
+                    class="fa fa-facebook-f" target="_blank"></a></li>
+                <li><a href="https://www.instagram.com/evrenglobalsolutions/?hl=en" class="fa fa-instagram"
+                    target="_blank"></a></li>
+                <li class="linkedin"><a href="https://in.linkedin.com/company/evren-global-solutions"
+                    class="fa fa-linkedin" target="_blank"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCmngmfcUnEGGHjc20qkjEfQ" class="fa fa-youtube"
+                    target="_blank"></a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Header-Upper-->
+      <div class="header-upper">
+        <div class="auto-container clearfix">
+
+          <div class="pull-left logo-box">
+            <div class="logo"><a href="/"><img src="ImagesEGS/logo180x60.png" alt="" title=""></a></div>
+          </div>
+
+          <div class="nav-outer clearfix">
+            <!--Mobile Navigation Toggler-->
+            <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+            <!-- Main Menu -->
+            <nav class="main-menu navbar-expand-md">
+              <div class="navbar-header">
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+              <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                <ul class="navigation clearfix">
+                  <li class=""><a href="/">Home</a>
+
+                  </li>
+                  <li class=""><a href="about">Discover EGS</a>
+
+                  </li>
+                  <li class=""><a href="services">Services</a>
+
+                  </li>
+                  <li class="current"><a href="events">Events</a>
+
+                  </li>
+                  <li class=""><a target="_blank" href="https://evrenglobalsolutions.com/egs-portfolio/">Portfolio</a>
+
+                  </li>
+                  <li class=""><a href="blog">Blog</a>
+
+                  </li>
+                  <li><a href="contact">Contact us</a></li>
+                  <li>
+                    <a href="Gst-billing">GST Billing S/W</a>
+                  </li>
+                  <!-- <li><a href="https://forms.gle/814b2V633e2TFqSk8" target="_blank">Join Us</a></li> -->
+                </ul>
+              </div>
+            </nav>
+
+            <!-- Main Menu End-->
+            <div class="outer-box clearfix">
+
+              <!-- Cart Box -->
+
+
+              <!-- Search Btn -->
+
+
+              <!-- Nav Btn -->
+
+              <!-- Quote Btn -->
+              <!-- <div class="btn-box">
+							<a href="contact" class="theme-btn btn-style-one"><span class="txt">Consult Experts</span></a>
+						</div> -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--End Header Upper-->
+
+      <!-- Sticky Header  -->
+      <div class="sticky-header">
+        <div class="auto-container clearfix">
+          <!--Logo-->
+          <div class="logo pull-left">
+            <a href="/" title=""><img src="ImagesEGS/logo180x55.png" alt="" title=""></a>
+          </div>
+          <!--Right Col-->
+          <div class="pull-right">
+            <!-- Main Menu -->
+            <nav class="main-menu">
+              <!--Keep This Empty / Menu will come through Javascript-->
+            </nav><!-- Main Menu End-->
+
+            <!-- Main Menu End-->
+            <div class="outer-box clearfix">
+
+              <!-- Cart Box -->
+
+
+              <!-- Search Btn -->
+
+              <!-- Nav Btn -->
+              <div class="nav-btn navSidebar-button"><span class="icon flaticon-menu"></span></div>
+
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Sticky Menu -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+        <nav class="menu-box">
+          <div class="nav-logo"><a href="/"><img src="ImagesEGS/logo180x60.png" alt="" title=""></a></div>
+          <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        </nav>
+      </div><!-- End Mobile Menu -->
+
+    </header>
+    <!-- End Main Header -->
+
+    <!-- Sidebar Cart Item -->
+    <div class="xs-sidebar-group info-group">
+      <div class="xs-overlay xs-bg-black"></div>
+      <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+          <div class="widget-heading">
+            <a href="#" class="close-side-widget">
+              X
+            </a>
+          </div>
+          <div class="sidebar-textwidget">
+
+            <!-- Sidebar Info Content -->
+            <div class="sidebar-info-contents">
+              <div class="content-inner">
+                <div class="logo">
+                  <a href="/"><img src="ImagesEGS/egswhitelogo 180x60.png" alt="" /></a>
+                </div>
+                <div class="content-box">
+                  <h2>About Us</h2>
+                  <p class="text">Evren Global Solutions Pvt. Ltd. (EGS) is an IT Solution and overseas education
+                    consultation company founded by a group of IT Professionals and Professors from various MNC’s and
+                    Universities across Delhi.</p>
+                  <a href="#" class="theme-btn btn-style-two"><span class="txt">Consultation</span></a>
+                </div>
+                <div class="contact-info">
+                  <h2>Contact Info</h2>
+                  <ul class="list-style-one">
+                    <li><span class="icon fa fa-location-arrow"></span>128-A, First Floor, D-Mall, Netaji Subhash Place,
+                      New Delhi-110034, India</li>
+                    <li><span class="icon fa fa-phone"></span>+918199050506/+918199050507</li>
+                    <li><span class="icon fa fa-envelope"></span>info@evrenglobalsolutions.com</li>
+                    <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+                  </ul>
+                </div>
+                <!-- Social Box -->
+                <ul class="social-box">
+                  <li class="facebook"><a href="#" class="fa fa-facebook-f"></a></li>
+                  <li class="twitter"><a href="#" class="fa fa-twitter"></a></li>
+                  <li class="linkedin"><a href="#" class="fa fa-linkedin"></a></li>
+                  <li class="instagram"><a href="#" class="fa fa-instagram"></a></li>
+                  <li class="youtube"><a href="#" class="fa fa-youtube"></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END sidebar widget item -->
+
+    <!--Page Title-->
+    <section class="page-title">
+      <div class="pattern-layer-one" style="background-image: url(images/background/pattern-16.png)"></div>
+      <div class="auto-container">
+        <h1>Our Events</h1>
+        <ul class="page-breadcrumb">
+          <li><a href="/">home</a></li>
+          <li>Our Events</li>
+        </ul>
+      </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Events Start -->
+    <div class="toggle-container">
+      <button class="toggle-button active" id="upcoming-toggle">Upcoming Events</button>
+      <button class="toggle-button" id="past-toggle">Past Events</button>
+    </div>
+
+    <section id="upcoming-events-section">
+      <h2>Upcoming Events</h2>
+      <div class="events-container" id="upcoming-events">
+        <!-- Upcoming Event 1 -->
+        <div class="event-card" style="--delay: 1">
+          <div class="event-image" style="background-image: url('ImagesEGS/Events/icmmcs.png')"></div>
+          <div class="event-content">
+            <span class="badge badge-upcoming">Upcoming</span>
+            <h3 class="event-title">ICMMCS 2025</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Nov 18 - 20, 2025
+            </p>
+            <p class="event-description">The International Conference on Mathematics, Management, and Computer Science
+              (ICMMCS) is a prestigious gathering of researchers, academics, and industry professionals from around the
+              world.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              To be decided...
+            </p>
+            <a href="https://adityakkpk.github.io/EGS-OIRC/register.html" target="_blank" class="event-button">Register
+              Now</a>
+          </div>
+        </div>
+
+        <!-- Upcoming Event 2 -->
+        <div class="event-card" style="--delay: 2">
+          <div class="event-image" style="background-image: url('ImagesEGS/Events/ibiea.png')"></div>
+          <div class="event-content">
+            <span class="badge badge-upcoming">Upcoming</span>
+            <h3 class="event-title">IBIEA 2025</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              May 29, 2025
+            </p>
+            <p class="event-description">The International Business Innovation and Excellence Awards is a prestigious
+              global event dedicated to recognizing and celebrating outstanding achievements in business, research, and
+              innovation.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Muscat, Sultanate of Oman
+            </p>
+            <a href="https://ibiea.com" target="_blank" class="event-button">Nominate Now</a>
+          </div>
+        </div>
+
+        <!-- Upcoming Event 3 -->
+        <!-- <div class="event-card" style="--delay: 3">
+          <div class="event-image" style="background-image: url('/api/placeholder/400/320')"></div>
+          <div class="event-content">
+            <span class="badge badge-upcoming">Upcoming</span>
+            <h3 class="event-title">Team Building Retreat</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              July 10-12, 2025
+            </p>
+            <p class="event-description">A three-day retreat focused on team building, strategic planning, and
+              professional development.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Mountain View Resort
+            </p>
+            <a href="#" class="event-button">RSVP</a>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="past-events-section">
+      <h2>Past Events</h2>
+      <div class="events-container" id="past-events">
+        <!-- Past Event 1 -->
+        <div class="event-card" style="--delay: 1">
+          <div class="event-image" style="background-image: url('ImagesEGS/Events/past/event1.jpg')"></div>
+          <div class="event-content">
+            <span class="badge badge-past">Past</span>
+            <h3 class="event-title">Q1 Strategy Workshop</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              January 25, 2025
+            </p>
+            <p class="event-description">An intensive day of strategic planning and goal setting for the upcoming
+              quarter.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Company Headquarters
+            </p>
+            <a href="#event-grallery" class="event-button">View Recap</a>
+          </div>
+        </div>
+
+        <!-- Past Event 2 -->
+        <div class="event-card" style="--delay: 2">
+          <div class="event-image" style="background-image: url('ImagesEGS/Events/past/event2.jpg')"></div>
+          <div class="event-content">
+            <span class="badge badge-past">Past</span>
+            <h3 class="event-title">UX Design Workshop</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              February 10, 2025
+            </p>
+            <p class="event-description">A collaborative workshop focusing on user experience design principles and best
+              practices.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Design Studio
+            </p>
+            <a href="#event-grallery" class="event-button">View Resources</a>
+          </div>
+        </div>
+
+        <!-- Past Event 3 -->
+        <div class="event-card" style="--delay: 3">
+          <div class="event-image" style="background-image: url('ImagesEGS/Events/past/event3.jpg')"></div>
+          <div class="event-content">
+            <span class="badge badge-past">Past</span>
+            <h3 class="event-title">Community Hackathon</h3>
+            <p class="event-date">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              March 15-16, 2025
+            </p>
+            <p class="event-description">A 48-hour challenge where teams collaborated to build innovative solutions for
+              local community issues.</p>
+            <p class="event-location">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Tech Innovation Hub
+            </p>
+            <a href="#event-grallery" class="event-button">View Winners</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Events End -->
+
+    <!-- Event Gallery Start -->
+    <section style="padding: 32px 0;" id="event-grallery">
+      <div class="container">
+        <div class="gallery-container">
+          <h2 class="gallery-heading">Event Gallery</h2>
+
+          <!-- <div class="gallery-filter">
+            <button class="filter-button active" data-filter="all">All Events</button>
+            <button class="filter-button" data-filter="conference">Conference</button>
+            <button class="filter-button" data-filter="award">Award</button>
+            <button class="filter-button" data-filter="hackathon">Hackathon</button>
+            <button class="filter-button" data-filter="retreat">Retreat</button>
+          </div> -->
+
+          <div class="gallery">
+            <!-- Conference Images -->
+            <div class="gallery-item" data-category="conference">
+              <img src="ImagesEGS/Events/icmmcs.png" alt="ICMMCS 2025" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">ICMMCS 2025</span>
+                <span class="caption-date">Nov 18 - 20, 2025</span>
+              </div>
+            </div>
+
+            <!-- <div class="gallery-item" data-category="conference">
+              <img src="/api/placeholder/400/320" alt="Conference Keynote Speaker" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Conference Keynote</span>
+                <span class="caption-date">May 15, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="conference">
+              <img src="/api/placeholder/400/320" alt="Conference Panel Discussion" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Panel Discussion</span>
+                <span class="caption-date">May 15, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="conference">
+              <img src="/api/placeholder/400/320" alt="Conference Networking Session" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Networking Session</span>
+                <span class="caption-date">May 15, 2025</span>
+              </div>
+            </div> -->
+
+            <!-- Award Images -->
+            <div class="gallery-item" data-category="award">
+              <img src="ImagesEGS/Events/ibiea.png" alt="IBIEA 2025" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">IBIEA 2025</span>
+                <span class="caption-date">May 29, 2025</span>
+              </div>
+            </div>
+
+            <!-- <div class="gallery-item" data-category="award">
+              <img src="/api/placeholder/400/320" alt="award Brainstorming" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Brainstorming Session</span>
+                <span class="caption-date">February 10, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="award">
+              <img src="/api/placeholder/400/320" alt="award Group Activity" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Group Activity</span>
+                <span class="caption-date">February 10, 2025</span>
+              </div>
+            </div> -->
+
+            <!-- Hackathon Images -->
+            <div class="gallery-item" data-category="hackathon">
+              <img src="ImagesEGS/Events/past/event1.jpg" alt="Community Hackathon" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Community Hackathon</span>
+                <span class="caption-date">March 15-16, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="hackathon">
+              <img src="ImagesEGS/Events/past/event2.jpg" alt="Hackathon Team Working" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Teams At Work</span>
+                <span class="caption-date">March 15, 2025</span>
+              </div>
+            </div>
+
+            <!-- <div class="gallery-item" data-category="hackathon">
+              <img src="/api/placeholder/400/320" alt="Hackathon Presentation" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Project Presentation</span>
+                <span class="caption-date">March 16, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="hackathon">
+              <img src="/api/placeholder/400/320" alt="Hackathon Winners" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Winning Team</span>
+                <span class="caption-date">March 16, 2025</span>
+              </div>
+            </div> -->
+
+            <!-- Retreat Images -->
+            <div class="gallery-item" data-category="retreat">
+              <img src="ImagesEGS/Events/past/event3.jpg" alt="Team Building Retreat" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Team Building Retreat</span>
+                <span class="caption-date">July 10-12, 2025</span>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="retreat">
+              <img src="ImagesEGS/Events/past/event4.jpg" alt="Retreat Outdoor Activity" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Outdoor Activities</span>
+                <span class="caption-date">July 11, 2025</span>
+              </div>
+            </div>
+
+            <!-- <div class="gallery-item" data-category="retreat">
+              <img src="/api/placeholder/400/320" alt="Retreat Strategy Session" class="gallery-img">
+              <div class="gallery-caption">
+                <span class="caption-title">Strategy Session</span>
+                <span class="caption-date">July 12, 2025</span>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox">
+        <button class="lightbox-close">×</button>
+        <button class="lightbox-nav lightbox-prev">❮</button>
+        <div class="lightbox-content">
+          <img src="" alt="" class="lightbox-img">
+          <div class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next">❯</button>
+      </div>
+    </section>
+    <!-- Event Gallery End -->
+
+    <!-- Info Section -->
+    <section class="info-section">
+      <div class="auto-container">
+        <div class="row clearfix">
+
+          <!-- Logo Column -->
+          <!-- <div class="logo-column col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-column">
+						<div class="logo">
+							<a href="/"><img src="ImagesEGS/egswhitelogo 180x60.png" alt="" /></a>
+						</div>
+					</div>
+				</div> -->
+
+          <div class="info-column col-lg-3 col-md-6 col-sm-12">
+            <div class="inner-column">
+              <div class="icon-box"><span class="flaticon-pin"></span></div>
+              <ul>
+                <li><strong>Corporate Office 1</strong></li>
+                <li>128-A, First Floor, D-Mall, Netaji Subhash Place, New Delhi-110034, India</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Column -->
+          <div class="info-column col-lg-3 col-md-6 col-sm-12">
+            <div class="inner-column">
+              <div class="icon-box"><span class="flaticon-pin"></span></div>
+              <ul>
+                <li><strong>Corporate Office 2</strong></li>
+                <li>103, First Floor, D-Mall, Netaji Subhash Place, New Delhi-110034, India</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Column -->
+          <div class="info-column col-lg-3 col-md-6 col-sm-12">
+            <div class="inner-column">
+              <div class="icon-box"><span class="flaticon-phone-call"></span></div>
+              <ul>
+                <li><strong>Phone</strong></li>
+                <li> <a href="tel:8199050506" style="color: white;">+918199050506</a></li>
+                <li> <a href="tel:8199050507" style="color: white;">+918199050507</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Info Column -->
+          <div class="info-column col-lg-3 col-md-6 col-sm-12">
+            <div class="inner-column">
+              <div class="icon-box"><span class="flaticon-email-1"></span></div>
+              <ul>
+                <li><strong>E-Mail</strong></li>
+                <li> <a href="mailto:info@evrenglobalsolutions.com"
+                    style="color: white;">info@evrenglobalsolutions.com</a> </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Info Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer style-three">
+      <div class="pattern-layer-three" style="background-image: url(images/background/pattern-14.png)"></div>
+      <div class="pattern-layer-four" style="background-image: url(images/background/pattern-15.png)"></div>
+      <!--Waves end-->
+      <div class="auto-container">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+          <div class="row clearfix">
+
+            <!-- Footer Column -->
+            <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+              <div class="footer-widget logo-widget">
+                <h5>About EGS</h5>
+                <div class="text">Evren Global Solutions Pvt. Ltd. (EGS) is an IT Solution and overseas education
+                  consultation company founded by a group of IT Professionals and Professors from various MNC’s and
+                  Universities across Delhi.<br><br> </div>
+              </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+              <div class="footer-widget links-widget">
+                <h5>Quick Links</h5>
+                <ul class="list-link">
+                  <li><a href="services">Services</a></li>
+                  <li><a href="events">Events</a></li>
+                  <li><a href="portfolio">Portfolio</a></li>
+                  <li><a href="blog">Blog</a></li>
+                  <li><a href="contact">Contact Us</a></li>
+                  <li><a href="https://forms.gle/pu2uEXkJQgPMsr8G8" target="_blank">Join our Team</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Footer Column -->
+            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+              <div class="footer-widget subscribe-widget">
+                <h5>Become Our Client</h5>
+                <div class="text">Enter Your E-mail and <br> we will get back to you in 1-2 business days.</div>
+                <!--Emailed Form-->
+                <div class="emailed-form">
+                  <form method="post" action="contact.html">
+                    <div class="form-group">
+                      <input type="email" name="email" value="" placeholder="Enter Your Email" required>
+                      <button type="submit" class="theme-btn">Subscribe Now</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="auto-container">
+          <div class="row clearfix">
+            <!-- Column -->
+            <div class="column col-lg-12 col-md-12 col-sm-12">
+              <div class="copyright" style="text-align: center;">Copyright &copy; 2021 Evren Global Solutions. All
+                Rights Reserved.</div>
+            </div>
+            <!-- Column -->
+            <!-- <div class="column col-lg-6 col-md-12 col-sm-12">
+						<ul class="footer-nav">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+					</div> -->
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+  <!--End pagewrapper-->
+
+  <!-- Color Palate / Color Switcher -->
+
+  <div class="color-palate">
+    <div class="color-trigger">
+      <i class="fa fa-gear"></i>
+    </div>
+    <div class="color-palate-head">
+      <h6>Choose Your Color</h6>
+    </div>
+
+    <div class="various-color clearfix">
+      <div class="colors-list">
+        <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+        <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+        <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+        <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+        <span class="palate purple-color" data-theme-file="css/color-themes/purple-theme.css"></span>
+        <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+        <span class="palate brown-color" data-theme-file="css/color-themes/brown-theme.css"></span>
+        <span class="palate redd-color" data-theme-file="css/color-themes/redd-color.css"></span>
+      </div>
+    </div>
+
+    <ul class="rtl-version option-box">
+      <li class="rtl">RTL Version</li>
+      <li>LTR Version</li>
+    </ul>
+
+    <a href="#" class="purchase-btn">Purchase now $17</a>
+
+    <div class="palate-foo">
+      <span>You will find much more options for colors and styling in admin panel. This color picker is used only for
+        demonstation purposes.</span>
+    </div>
+
+  </div>
+
+  <!-- Search Popup -->
+  <div class="search-popup">
+    <button class="close-search style-two"><span class="flaticon-multiply"></span></button>
+    <button class="close-search"><span class="flaticon-up-arrow-1"></span></button>
+    <form method="post" action="blog.html">
+      <div class="form-group">
+        <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+  <!-- End Header Search -->
+
+  <!--Scroll to top-->
+  <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+  <!--Scroll to top-->
+  <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/appear.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/tilt.jquery.min.js"></script>
+  <script src="js/jquery.paroller.min.js"></script>
+  <script src="js/owl.js"></script>
+  <script src="js/mixitup.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/nav-tool.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/color-settings.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const upcomingToggle = document.getElementById('upcoming-toggle');
+      const pastToggle = document.getElementById('past-toggle');
+      const upcomingSection = document.getElementById('upcoming-events-section');
+      const pastSection = document.getElementById('past-events-section');
+
+      upcomingToggle.addEventListener('click', function () {
+        upcomingToggle.classList.add('active');
+        pastToggle.classList.remove('active');
+        upcomingSection.style.display = 'block';
+        pastSection.style.display = 'none';
+
+        // Trigger animations again
+        animateCards(upcomingSection);
+      });
+
+      pastToggle.addEventListener('click', function () {
+        pastToggle.classList.add('active');
+        upcomingToggle.classList.remove('active');
+        pastSection.style.display = 'block';
+        upcomingSection.style.display = 'none';
+
+        // Trigger animations again
+        animateCards(pastSection);
+      });
+
+      function animateCards(section) {
+        const cards = section.querySelectorAll('.event-card');
+        cards.forEach((card, index) => {
+          card.style.animation = 'none';
+          card.offsetHeight; // Trigger reflow
+          card.style.setProperty('--delay', index + 1);
+          card.style.animation = 'fadeIn 0.6s forwards';
+          card.style.animationDelay = `${(index + 1) * 0.2}s`;
+        });
+      }
+
+      // Initial animation
+      animateCards(upcomingSection);
+
+      // Gallery filtering
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const loader = document.querySelector('.loader');
+
+      // Initially hide loader and show items with animation
+      setTimeout(function () {
+        loader.style.display = 'none';
+        galleryItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('show');
+          }, index * 100);
+        });
+      }, 1500);
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+
+          // Show loader
+          loader.style.display = 'flex';
+
+          // Hide all items first
+          galleryItems.forEach(item => {
+            item.classList.remove('show');
+          });
+
+          // Delay to show loading effect
+          setTimeout(() => {
+            // Filter and show items
+            galleryItems.forEach((item, index) => {
+              if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                setTimeout(() => {
+                  item.classList.add('show');
+                }, index * 100);
+              }
+            });
+
+            // Hide loader
+            loader.style.display = 'none';
+          }, 800);
+        });
+      });
+
+      // Lightbox functionality
+      const lightbox = document.querySelector('.lightbox');
+      const lightboxImg = document.querySelector('.lightbox-img');
+      const lightboxCaption = document.querySelector('.lightbox-caption');
+      const lightboxClose = document.querySelector('.lightbox-close');
+      const lightboxPrev = document.querySelector('.lightbox-prev');
+      const lightboxNext = document.querySelector('.lightbox-next');
+
+      let currentIndex = 0;
+      const visibleItems = [];
+
+      function updateVisibleItems() {
+        visibleItems.length = 0;
+        document.querySelectorAll('.gallery-item.show').forEach(item => {
+          visibleItems.push(item);
+        });
+      }
+
+      function openLightbox(index) {
+        updateVisibleItems();
+        if (visibleItems.length === 0) return;
+
+        currentIndex = index;
+        const item = visibleItems[currentIndex];
+        const img = item.querySelector('.gallery-img');
+        const caption = item.querySelector('.caption-title').textContent;
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function navigateLightbox(direction) {
+        currentIndex = (currentIndex + direction + visibleItems.length) % visibleItems.length;
+        const item = visibleItems[currentIndex];
+        const img = item.querySelector('.gallery-img');
+        const caption = item.querySelector('.caption-title').textContent;
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+      }
+
+      galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          openLightbox(index);
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+      lightboxNext.addEventListener('click', () => navigateLightbox(1));
+
+      // Close lightbox when clicking outside of content
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateLightbox(1);
+        }
+      });
+    }); 
+  </script>
+
+</body>
+
+</html>
